@@ -105,6 +105,9 @@ get_status_led() {
 	gl-inet)
 		status_led="gl-connect:green:lan"
 		;;
+	map2n)
+                status_led="map2n:green:lan"
+                ;;
 	epg5000)
 		status_led="epg5000:amber:power"
 		;;

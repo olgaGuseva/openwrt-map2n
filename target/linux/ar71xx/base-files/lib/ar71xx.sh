@@ -311,6 +311,19 @@ gl_inet_board_detect() {
 	esac
 }
 
+map2n_board_detect() {
+        local size="$(mtd_get_part_size 'firmware')"
+
+        case "$size" in
+        8192000)
+                AR71XX_MODEL='map2n 6408A v1'
+                ;;
+        16580608)
+                AR71XX_MODEL='map2n 6416A v1'
+                ;;
+        esac
+}
+
 ar71xx_board_detect() {
 	local machine
 	local name
@@ -455,6 +468,10 @@ ar71xx_board_detect() {
 		name="gl-inet"
 		gl_inet_board_detect
 		;;
+	*"MAP2N v1")
+		name="map2n"
+		map2n_board_detect
+		;; 
 	*"EnGenius EPG5000")
 		name="epg5000"
 		;;

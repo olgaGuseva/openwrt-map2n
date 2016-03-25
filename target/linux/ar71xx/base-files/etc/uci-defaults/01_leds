@@ -185,7 +185,10 @@ gl-inet)
 	ucidef_set_led_netdev "lan" "LAN" "gl-connect:green:lan" "eth1"
 	ucidef_set_led_wlan "wlan" "WLAN" "gl-connect:red:wlan" "phy0tpt"
 	;;
-
+map2n)
+        ucidef_set_led_netdev "lan" "LAN" "map2n:green:lan" "eth1"
+        ucidef_set_led_wlan "wlan" "WLAN" "map2n:red:wlan" "phy0tpt"
+        ;;
 esr900)
 	ucidef_set_led_wlan "wlan2g" "WLAN 2.4 GHz" "engenius:blue:wlan-2g" "phy0tpt"
 	ucidef_set_led_wlan "wlan5g" "WLAN 5 GHz" "engenius:blue:wlan-5g" "phy1tpt"

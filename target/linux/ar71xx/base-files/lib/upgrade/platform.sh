@@ -312,6 +312,7 @@ platform_check_image() {
 	el-m150 | \
 	el-mini | \
 	gl-inet | \
+	map2n |\
 	mc-mac1200r | \
 	minibox-v1 |\
 	onion-omega | \

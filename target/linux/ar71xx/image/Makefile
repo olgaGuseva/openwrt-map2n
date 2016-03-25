@@ -345,6 +345,23 @@ define Device/gl-inet-6416A-v1
 endef
 TARGET_DEVICES += gl-inet-6408A-v1 gl-inet-6416A-v1
 
+define Device/map2n-6408A-v1
+    $(Device/tplink-8mlzma)
+    BOARDNAME := MAP2N
+    DEVICE_PROFILE := MAP2N
+    TPLINK_HWID := 0x08000001
+    CONSOLE := ttyATH0,115200
+endef
+
+define Device/map2n-6416A-v1
+    $(Device/tplink-16mlzma)
+    BOARDNAME := MAP2N
+    DEVICE_PROFILE := MAP2N
+    TPLINK_HWID := 0x08000001
+    CONSOLE := ttyATH0,115200
+endef
+TARGET_DEVICES += map2n-6408A-v1 map2n-6416A-v1
+
 define Device/mc-mac1200r
     $(Device/tplink-8mlzma)
     BOARDNAME := MC-MAC1200R
